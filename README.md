@@ -1,2 +1,8 @@
-# BolotNam_infra
-BolotNam Infra repository
+Выполнено ДЗ № 2
+ Основное ДЗ "Работа с вашим репозиторием. ChatOps. Интеграция с чатом"
+ В процессе сделано:
+Пункт 1 Добавлен файл .github/PULL_REQUEST_TEMPLATE.md
+Пункт 2 Настроена проверка при коммите с помощбю хука pre-commit
+Пункт 3 Настроена интерграция Github-Slack
+Пункт 4 настроена интеграция Slack-Travis CI
+Пункт 5 проверка test.py пройдена
