@@ -1,6 +1,6 @@
 ДЗ №4
-testapp_IP=84.201.172.198
-testapp_port=9292
+testapp_IP = 84.201.172.198
+testapp_port = 9292
 
 yc compute instance create \
   --name reddit-app-2 \
