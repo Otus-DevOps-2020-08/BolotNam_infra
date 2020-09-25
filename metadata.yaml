@@ -1,0 +1,35 @@
+#cloud-config
+disable_root: true
+timezone: Europe/Moscow
+repo_update: true
+repo_upgrade: true
+apt:
+  preserve_sources_list: true
+
+users:
+    - default
+    - name: appuser
+      sudo: ALL=(ALL) NOPASSWD:ALL
+      shell: /bin/bash
+      ssh-authorized-keys:
+        - "ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDX7Lv01pPgQLk7XeJsOo+3GA3sWJ93hI0bRo+D4y0qoeHQSuLO9aKuEdjhnxTzhlm6/0fE4xlPyND0wh3cpFEMN6OFMzS+iQdLkTrXtmdoHy92i4pWWkC7Lgw9p+U+Uzcqm16NqfWtd2RLPo7EzCiVzsBFHfB2wCCjrUNP2b/9/0Z5V1Bgeok/HvrXjuk3nKgl5p3E2igkwutzzaA4eDr6qp1iQgyEXiEpmaXJTe51DCDyQVn2mo/V/y2Yeft9TSWbWnD6oTMiTwgyEs+Q1L3Fv/3o+2Rkaead8U9nB6NttI+ZByceRpX5r7PfmyDcKRk7y+aY1G3XcTUG5x6JTfWA37/7tXxrrqGCwDdwrbiIx8JDtDvqaQvSGBnCRc8piS3XTYEWGWgDoCYlGgL3Xo/iLcR5YC2DF3U7kI4SJW5irR4O0SQceWXVUcJS6OToqvcfwVGESvhALmXvLDsI3TuDbfxFscWcFgf0CwSxBIqOoJZj5HVaNEjo+JeG/w71WL0= appuser"
+
+packages:
+  - git
+  - ruby-full
+  - ruby-bundler
+  - build-essential
+  - apt-transport-https
+
+runcmd:
+  - wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | apt-key add -
+  - echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+  - apt-get install -y apt-transport-https ca-certificates libcurl3-gnutls
+  - apt-get update
+  - apt-get install -y mongodb-org
+  - systemctl start mongod
+  - systemctl enable mongod
+  - cd /home/appuser
+  - git clone -b monolith https://github.com/express42/reddit.git
+  - cd reddit && bundle install
+  - puma -d
