@@ -1,6 +1,6 @@
 {
     "i_service_account_key_file": "example_key.json",
-    "i_folder_id": "abrakadabra",
-    "i_source_image_family_name": "ubuntu-someversion-lts",
-    "i_image_name": "test_image_name"
+    "i_folder_id": "b1gcgsbk2a60l0glanvc",
+    "i_source_image_family_name": "ubuntu-1604-lts",
+    "i_image_name": "reddit-base-{{timestamp}}"
 }
