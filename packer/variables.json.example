@@ -1,5 +1,5 @@
 {
-    "i_service_account_key_file": "my_local_key.json",
+    "i_service_account_key_file": "exampley.key.json",
     "i_folder_id": "abrakadabra",
     "i_source_image_family_name": "ubuntu-someversion-lts",
     "i_image_name": "test_image_name"
