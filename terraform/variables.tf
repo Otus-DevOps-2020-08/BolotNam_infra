@@ -26,3 +26,6 @@ variable instsnce_count {
   description = "Count instance"
   default     = 1
 }
+variable private_key_path {
+  description = "way to private key Path"
+}
