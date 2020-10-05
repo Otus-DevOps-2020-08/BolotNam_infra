@@ -1,0 +1,8 @@
+cloud_id = "some_cloud_id"
+folder_id = "some_folder_id"
+zone = "ru-central1-a"
+image_id = "some_image_id"
+public_key_path = "~/.ssh/public_.pub"
+subnet_id = "e9bnvt00njmb2km40plssome_subnet_id"
+service_account_key_file = "way_to_packer_key"
+private_key_path = "way_to_private_key"
