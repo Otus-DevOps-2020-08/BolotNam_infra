@@ -1,3 +1,3 @@
-resource "yndex_storage" "tf-bucket" {
+resource "yandex_storage_bucket" "tf-bucket" {
     bucket = "nbt-bucket"
 }
