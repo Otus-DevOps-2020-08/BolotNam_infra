@@ -1,6 +1,5 @@
-ДЗ №3
-bastion_IP = 178.154.227.204
-someinternalhost_IP = 10.130.0.25
+ДЗ №6
+выполнено с * (вынужденно)
 
 ДЗ #5
 выполнено без доп заданий.
@@ -18,3 +17,7 @@ yc compute instance create \
   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=./metadata.yaml
+
+ДЗ №3
+bastion_IP = 178.154.227.204
+someinternalhost_IP = 10.130.0.25
