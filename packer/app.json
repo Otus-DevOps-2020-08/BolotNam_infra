@@ -5,7 +5,7 @@
             "service_account_key_file": "{{ user `i_service_account_key_file` }}",
             "folder_id": "{{ user `i_folder_id` }}",
             "source_image_family": "{{ user `i_source_image_family_name` }}",
-            "image_name": "{{ user `i_image_name` }}",
+            "image_name": "{{ user `app_image_name` }}",
             "image_family": "reddit-base",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1",
@@ -14,10 +14,8 @@
     ],
     "provisioners": [
         {
-            "type": "shell",
-            "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}",
-            "pause_before": "15s"
+            "type": "ansible",
+            "playbook_file": "ansible/packer_app.yml"
         }
     ]
 }
