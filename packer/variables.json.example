@@ -2,5 +2,7 @@
     "i_service_account_key_file": "example_key.json",
     "i_folder_id": "b1gcgsbk2a60l0glanvc",
     "i_source_image_family_name": "ubuntu-1604-lts",
-    "i_image_name": "reddit-base-{{timestamp}}"
+    "i_image_name": "reddit-base-{{timestamp}}",
+    "app_image_name": "app-reddit-base-{{timestamp}}",
+    "db_image_name": "db-reddit-base-{{timestamp}}"
 }
