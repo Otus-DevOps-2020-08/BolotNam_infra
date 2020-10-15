@@ -1,3 +1,17 @@
+ДЗ №8 Ansible-2
+1. Деплоим mongod с помощью ansible на хост db, используем task и handlers
+    деплоим с указанием хоста --limit db
+2. Деплоим puma на app, также с task и handler
+    деплоим с указанием хоста --limit app и тэгов
+3. Деплоим ruby с помощью tasks git и bundle
+4. Создаем playbook с тремя сценариями (db-app-deploy)
+5. Создаем три playbook и деплоим с помощью site.yml
+6. Создаем playbook packer_app.yml (для установки ruby, bundle и git) и packer_db.yml (установка mongod)
+7. В директории packer создаем app.json и db.json (в них меняем секцию provisioners, указываем packer_app.yml и packer_db.yml)
+8. Создаем два новых образа
+9. С помощью terraform из этих образов развертываем ВМ app и db
+10. проверяем все с помощью playbook site.yml
+
 ДЗ №7
 1. на удаленной ВМ. склонирован репозиторий
 2. далее удалена папка reddit c репозиторием
