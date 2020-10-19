@@ -1,3 +1,17 @@
+ДЗ №8 Ansible-3
+1.  инициализация ansible-galaxy
+2.  настройка ролей app и db (tasks, handlers,defauls,files)
+3.  измененние playbooks app.yml и db.yml для работы с ролями
+4.  проверка terraform_destroy&apply + ansible-playbook site.yml
+5.  перенос inventory.json в ansible окружения stage и prod (app/inventory.json-по умолчанию)
+6.  настройка переменных групп-хостов group-vars
+7.  настройка вывода информации об окружении
+8.  реоргранизация директории ansible с проверкой (terraform rebuild и отработка playbooks)
+9.  добавление роли nginx для пролушки на 80 порту и проверка
+10. работа с ansible vault
+11. подсмотрел как реализовать dynamic inventory (задание со *)
+
+
 ДЗ №8 Ansible-2
 1. Деплоим mongod с помощью ansible на хост db, используем task и handlers
     деплоим с указанием хоста --limit db

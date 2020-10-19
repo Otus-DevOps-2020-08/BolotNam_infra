@@ -3,8 +3,8 @@ terraform {
     endpoint   = "storage.yandexcloud.net"
     bucket     = "nbt-bucket"
     region     = "ru-central1"
-    key        = "~/otus/temp/bucket.tfstate"
-    access_key = "access_key"
+    key        = "prod/prod.tfstate"
+    access_key = "access_key
     secret_key = "secret_key"
 
 
