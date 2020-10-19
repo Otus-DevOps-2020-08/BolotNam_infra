@@ -6,3 +6,5 @@ variables.json
 .terraform/
 *.backup
 *.retry
+jdauphant.nginx
+*jdauphant.nginx
